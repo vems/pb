@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+package pb;
+
+service Todo {
+  rpc All (AllRequest) returns (TodosReply) {}
+  rpc Create (CreateRequest) returns (TodoResponse) {}
+  rpc Find (FindRequest) returns (TodoResponse) {}
+  rpc Update (UpdateRequest) returns (TodoResponse) {}
+  rpc DeleteAll (DeleteAllRequest) returns (DeleteAllResponse) {}
+  rpc Delete (DeleteRequest) returns (DeleteResponse) {}
+}
+
+message TodoRequest {
+  string title = 1;
+  bool completed = 2;
+  int64 order = 3;
+  string text = 4;
+}
+
+message TodoResponse {
+  int64 id = 1;
+  string title = 2;
+  string url = 3;
+  bool completed = 4;
+  int64 order = 5;
+  string text = 6;
+}
+
+message TodosReply {
+  repeated TodoResponse todos = 1;
+}
+
+message AllRequest {}
+
+message CreateRequest {
+  TodoRequest todo = 1;
+}
+
+message FindRequest {
+  int64 id = 1;
+}
+
+message UpdateRequest {
+  int64 id = 1;
+  TodoRequest todo = 2;
+}
+
+message DeleteAllRequest {}
+
+message DeleteAllResponse {}
+
+message DeleteRequest {
+  int64 id = 1;
+}
+
+message DeleteResponse {
+  string error = 1;
+}
