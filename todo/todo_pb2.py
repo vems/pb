@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='todo.proto',
   package='pb',
   syntax='proto3',
-  serialized_pb=_b('\n\ntodo.proto\x12\x02pb\"L\n\x0bTodoRequest\x12\r\n\x05title\x18\x01 \x01(\t\x12\x11\n\tcompleted\x18\x02 \x01(\x08\x12\r\n\x05order\x18\x03 \x01(\x03\x12\x0c\n\x04text\x18\x04 \x01(\t\"f\n\x0cTodoResponse\x12\n\n\x02id\x18\x01 \x01(\x03\x12\r\n\x05title\x18\x02 \x01(\t\x12\x0b\n\x03url\x18\x03 \x01(\t\x12\x11\n\tcompleted\x18\x04 \x01(\x08\x12\r\n\x05order\x18\x05 \x01(\x03\x12\x0c\n\x04text\x18\x06 \x01(\t\"-\n\nTodosReply\x12\x1f\n\x05todos\x18\x01 \x03(\x0b\x32\x10.pb.TodoResponse\"\x0c\n\nAllRequest\".\n\rCreateRequest\x12\x1d\n\x04todo\x18\x01 \x01(\x0b\x32\x0f.pb.TodoRequest\"\x19\n\x0b\x46indRequest\x12\n\n\x02id\x18\x01 \x01(\x03\":\n\rUpdateRequest\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x1d\n\x04todo\x18\x02 \x01(\x0b\x32\x0f.pb.TodoRequest\"\x12\n\x10\x44\x65leteAllRequest\"\x13\n\x11\x44\x65leteAllResponse\"\x1b\n\rDeleteRequest\x12\n\n\x02id\x18\x01 \x01(\x03\"\x1f\n\x0e\x44\x65leteResponse\x12\r\n\x05\x65rror\x18\x01 \x01(\t2\xad\x02\n\x04Todo\x12\'\n\x03\x41ll\x12\x0e.pb.AllRequest\x1a\x0e.pb.TodosReply\"\x00\x12/\n\x06\x43reate\x12\x11.pb.CreateRequest\x1a\x10.pb.TodoResponse\"\x00\x12+\n\x04\x46ind\x12\x0f.pb.FindRequest\x1a\x10.pb.TodoResponse\"\x00\x12/\n\x06Update\x12\x11.pb.UpdateRequest\x1a\x10.pb.TodoResponse\"\x00\x12:\n\tDeleteAll\x12\x14.pb.DeleteAllRequest\x1a\x15.pb.DeleteAllResponse\"\x00\x12\x31\n\x06\x44\x65lete\x12\x11.pb.DeleteRequest\x1a\x12.pb.DeleteResponse\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\ntodo.proto\x12\x02pb\"/\n\x0bTodoRequest\x12\r\n\x05title\x18\x01 \x01(\t\x12\x11\n\tcompleted\x18\x02 \x01(\x08\"<\n\x0cTodoResponse\x12\n\n\x02id\x18\x01 \x01(\x03\x12\r\n\x05title\x18\x02 \x01(\t\x12\x11\n\tcompleted\x18\x03 \x01(\x08\"0\n\rTodosResponse\x12\x1f\n\x05todos\x18\x01 \x03(\x0b\x32\x10.pb.TodoResponse\"\x0c\n\nAllRequest\".\n\rCreateRequest\x12\x1d\n\x04todo\x18\x01 \x01(\x0b\x32\x0f.pb.TodoRequest\"\x19\n\x0b\x46indRequest\x12\n\n\x02id\x18\x01 \x01(\x03\":\n\rUpdateRequest\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x1d\n\x04todo\x18\x02 \x01(\x0b\x32\x0f.pb.TodoRequest\"\x1b\n\rDeleteRequest\x12\n\n\x02id\x18\x01 \x01(\x03\"?\n\x0e\x44\x65leteResponse\x12\r\n\x05\x65rror\x18\x01 \x01(\t\x12\x1e\n\x04todo\x18\x02 \x01(\x0b\x32\x10.pb.TodoResponse\"\x12\n\x10\x44\x65leteAllRequest\"\x13\n\x11\x44\x65leteAllResponse2\xb0\x02\n\x04Todo\x12*\n\x03\x41ll\x12\x0e.pb.AllRequest\x1a\x11.pb.TodosResponse\"\x00\x12/\n\x06\x43reate\x12\x11.pb.CreateRequest\x1a\x10.pb.TodoResponse\"\x00\x12+\n\x04\x46ind\x12\x0f.pb.FindRequest\x1a\x10.pb.TodoResponse\"\x00\x12/\n\x06Update\x12\x11.pb.UpdateRequest\x1a\x10.pb.TodoResponse\"\x00\x12:\n\tDeleteAll\x12\x14.pb.DeleteAllRequest\x1a\x15.pb.DeleteAllResponse\"\x00\x12\x31\n\x06\x44\x65lete\x12\x11.pb.DeleteRequest\x1a\x12.pb.DeleteResponse\"\x00\x62\x06proto3')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -47,20 +47,6 @@ _TODOREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
-    _descriptor.FieldDescriptor(
-      name='order', full_name='pb.TodoRequest.order', index=2,
-      number=3, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='text', full_name='pb.TodoRequest.text', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
   ],
   extensions=[
   ],
@@ -74,7 +60,7 @@ _TODOREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=18,
-  serialized_end=94,
+  serialized_end=65,
 )
 
 
@@ -100,30 +86,9 @@ _TODORESPONSE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='url', full_name='pb.TodoResponse.url', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='completed', full_name='pb.TodoResponse.completed', index=3,
-      number=4, type=8, cpp_type=7, label=1,
+      name='completed', full_name='pb.TodoResponse.completed', index=2,
+      number=3, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='order', full_name='pb.TodoResponse.order', index=4,
-      number=5, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='text', full_name='pb.TodoResponse.text', index=5,
-      number=6, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -139,20 +104,20 @@ _TODORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=96,
-  serialized_end=198,
+  serialized_start=67,
+  serialized_end=127,
 )
 
 
-_TODOSREPLY = _descriptor.Descriptor(
-  name='TodosReply',
-  full_name='pb.TodosReply',
+_TODOSRESPONSE = _descriptor.Descriptor(
+  name='TodosResponse',
+  full_name='pb.TodosResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='todos', full_name='pb.TodosReply.todos', index=0,
+      name='todos', full_name='pb.TodosResponse.todos', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -170,8 +135,8 @@ _TODOSREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=200,
-  serialized_end=245,
+  serialized_start=129,
+  serialized_end=177,
 )
 
 
@@ -194,8 +159,8 @@ _ALLREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=247,
-  serialized_end=259,
+  serialized_start=179,
+  serialized_end=191,
 )
 
 
@@ -225,8 +190,8 @@ _CREATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=261,
-  serialized_end=307,
+  serialized_start=193,
+  serialized_end=239,
 )
 
 
@@ -256,8 +221,8 @@ _FINDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=309,
-  serialized_end=334,
+  serialized_start=241,
+  serialized_end=266,
 )
 
 
@@ -294,56 +259,8 @@ _UPDATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=336,
-  serialized_end=394,
-)
-
-
-_DELETEALLREQUEST = _descriptor.Descriptor(
-  name='DeleteAllRequest',
-  full_name='pb.DeleteAllRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=396,
-  serialized_end=414,
-)
-
-
-_DELETEALLRESPONSE = _descriptor.Descriptor(
-  name='DeleteAllResponse',
-  full_name='pb.DeleteAllResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=416,
-  serialized_end=435,
+  serialized_start=268,
+  serialized_end=326,
 )
 
 
@@ -373,8 +290,8 @@ _DELETEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=437,
-  serialized_end=464,
+  serialized_start=328,
+  serialized_end=355,
 )
 
 
@@ -392,6 +309,13 @@ _DELETERESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='todo', full_name='pb.DeleteResponse.todo', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -404,24 +328,73 @@ _DELETERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=466,
-  serialized_end=497,
+  serialized_start=357,
+  serialized_end=420,
 )
 
-_TODOSREPLY.fields_by_name['todos'].message_type = _TODORESPONSE
+
+_DELETEALLREQUEST = _descriptor.Descriptor(
+  name='DeleteAllRequest',
+  full_name='pb.DeleteAllRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=422,
+  serialized_end=440,
+)
+
+
+_DELETEALLRESPONSE = _descriptor.Descriptor(
+  name='DeleteAllResponse',
+  full_name='pb.DeleteAllResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=442,
+  serialized_end=461,
+)
+
+_TODOSRESPONSE.fields_by_name['todos'].message_type = _TODORESPONSE
 _CREATEREQUEST.fields_by_name['todo'].message_type = _TODOREQUEST
 _UPDATEREQUEST.fields_by_name['todo'].message_type = _TODOREQUEST
+_DELETERESPONSE.fields_by_name['todo'].message_type = _TODORESPONSE
 DESCRIPTOR.message_types_by_name['TodoRequest'] = _TODOREQUEST
 DESCRIPTOR.message_types_by_name['TodoResponse'] = _TODORESPONSE
-DESCRIPTOR.message_types_by_name['TodosReply'] = _TODOSREPLY
+DESCRIPTOR.message_types_by_name['TodosResponse'] = _TODOSRESPONSE
 DESCRIPTOR.message_types_by_name['AllRequest'] = _ALLREQUEST
 DESCRIPTOR.message_types_by_name['CreateRequest'] = _CREATEREQUEST
 DESCRIPTOR.message_types_by_name['FindRequest'] = _FINDREQUEST
 DESCRIPTOR.message_types_by_name['UpdateRequest'] = _UPDATEREQUEST
-DESCRIPTOR.message_types_by_name['DeleteAllRequest'] = _DELETEALLREQUEST
-DESCRIPTOR.message_types_by_name['DeleteAllResponse'] = _DELETEALLRESPONSE
 DESCRIPTOR.message_types_by_name['DeleteRequest'] = _DELETEREQUEST
 DESCRIPTOR.message_types_by_name['DeleteResponse'] = _DELETERESPONSE
+DESCRIPTOR.message_types_by_name['DeleteAllRequest'] = _DELETEALLREQUEST
+DESCRIPTOR.message_types_by_name['DeleteAllResponse'] = _DELETEALLRESPONSE
 
 TodoRequest = _reflection.GeneratedProtocolMessageType('TodoRequest', (_message.Message,), dict(
   DESCRIPTOR = _TODOREQUEST,
@@ -437,12 +410,12 @@ TodoResponse = _reflection.GeneratedProtocolMessageType('TodoResponse', (_messag
   ))
 _sym_db.RegisterMessage(TodoResponse)
 
-TodosReply = _reflection.GeneratedProtocolMessageType('TodosReply', (_message.Message,), dict(
-  DESCRIPTOR = _TODOSREPLY,
+TodosResponse = _reflection.GeneratedProtocolMessageType('TodosResponse', (_message.Message,), dict(
+  DESCRIPTOR = _TODOSRESPONSE,
   __module__ = 'todo_pb2'
-  # @@protoc_insertion_point(class_scope:pb.TodosReply)
+  # @@protoc_insertion_point(class_scope:pb.TodosResponse)
   ))
-_sym_db.RegisterMessage(TodosReply)
+_sym_db.RegisterMessage(TodosResponse)
 
 AllRequest = _reflection.GeneratedProtocolMessageType('AllRequest', (_message.Message,), dict(
   DESCRIPTOR = _ALLREQUEST,
@@ -472,20 +445,6 @@ UpdateRequest = _reflection.GeneratedProtocolMessageType('UpdateRequest', (_mess
   ))
 _sym_db.RegisterMessage(UpdateRequest)
 
-DeleteAllRequest = _reflection.GeneratedProtocolMessageType('DeleteAllRequest', (_message.Message,), dict(
-  DESCRIPTOR = _DELETEALLREQUEST,
-  __module__ = 'todo_pb2'
-  # @@protoc_insertion_point(class_scope:pb.DeleteAllRequest)
-  ))
-_sym_db.RegisterMessage(DeleteAllRequest)
-
-DeleteAllResponse = _reflection.GeneratedProtocolMessageType('DeleteAllResponse', (_message.Message,), dict(
-  DESCRIPTOR = _DELETEALLRESPONSE,
-  __module__ = 'todo_pb2'
-  # @@protoc_insertion_point(class_scope:pb.DeleteAllResponse)
-  ))
-_sym_db.RegisterMessage(DeleteAllResponse)
-
 DeleteRequest = _reflection.GeneratedProtocolMessageType('DeleteRequest', (_message.Message,), dict(
   DESCRIPTOR = _DELETEREQUEST,
   __module__ = 'todo_pb2'
@@ -499,6 +458,20 @@ DeleteResponse = _reflection.GeneratedProtocolMessageType('DeleteResponse', (_me
   # @@protoc_insertion_point(class_scope:pb.DeleteResponse)
   ))
 _sym_db.RegisterMessage(DeleteResponse)
+
+DeleteAllRequest = _reflection.GeneratedProtocolMessageType('DeleteAllRequest', (_message.Message,), dict(
+  DESCRIPTOR = _DELETEALLREQUEST,
+  __module__ = 'todo_pb2'
+  # @@protoc_insertion_point(class_scope:pb.DeleteAllRequest)
+  ))
+_sym_db.RegisterMessage(DeleteAllRequest)
+
+DeleteAllResponse = _reflection.GeneratedProtocolMessageType('DeleteAllResponse', (_message.Message,), dict(
+  DESCRIPTOR = _DELETEALLRESPONSE,
+  __module__ = 'todo_pb2'
+  # @@protoc_insertion_point(class_scope:pb.DeleteAllResponse)
+  ))
+_sym_db.RegisterMessage(DeleteAllResponse)
 
 
 # @@protoc_insertion_point(module_scope)

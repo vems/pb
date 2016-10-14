@@ -7,18 +7,13 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
   add_message "pb.TodoRequest" do
     optional :title, :string, 1
     optional :completed, :bool, 2
-    optional :order, :int64, 3
-    optional :text, :string, 4
   end
   add_message "pb.TodoResponse" do
     optional :id, :int64, 1
     optional :title, :string, 2
-    optional :url, :string, 3
-    optional :completed, :bool, 4
-    optional :order, :int64, 5
-    optional :text, :string, 6
+    optional :completed, :bool, 3
   end
-  add_message "pb.TodosReply" do
+  add_message "pb.TodosResponse" do
     repeated :todos, :message, 1, "pb.TodoResponse"
   end
   add_message "pb.AllRequest" do
@@ -33,28 +28,29 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     optional :id, :int64, 1
     optional :todo, :message, 2, "pb.TodoRequest"
   end
-  add_message "pb.DeleteAllRequest" do
-  end
-  add_message "pb.DeleteAllResponse" do
-  end
   add_message "pb.DeleteRequest" do
     optional :id, :int64, 1
   end
   add_message "pb.DeleteResponse" do
     optional :error, :string, 1
+    optional :todo, :message, 2, "pb.TodoResponse"
+  end
+  add_message "pb.DeleteAllRequest" do
+  end
+  add_message "pb.DeleteAllResponse" do
   end
 end
 
 module Pb
   TodoRequest = Google::Protobuf::DescriptorPool.generated_pool.lookup("pb.TodoRequest").msgclass
   TodoResponse = Google::Protobuf::DescriptorPool.generated_pool.lookup("pb.TodoResponse").msgclass
-  TodosReply = Google::Protobuf::DescriptorPool.generated_pool.lookup("pb.TodosReply").msgclass
+  TodosResponse = Google::Protobuf::DescriptorPool.generated_pool.lookup("pb.TodosResponse").msgclass
   AllRequest = Google::Protobuf::DescriptorPool.generated_pool.lookup("pb.AllRequest").msgclass
   CreateRequest = Google::Protobuf::DescriptorPool.generated_pool.lookup("pb.CreateRequest").msgclass
   FindRequest = Google::Protobuf::DescriptorPool.generated_pool.lookup("pb.FindRequest").msgclass
   UpdateRequest = Google::Protobuf::DescriptorPool.generated_pool.lookup("pb.UpdateRequest").msgclass
-  DeleteAllRequest = Google::Protobuf::DescriptorPool.generated_pool.lookup("pb.DeleteAllRequest").msgclass
-  DeleteAllResponse = Google::Protobuf::DescriptorPool.generated_pool.lookup("pb.DeleteAllResponse").msgclass
   DeleteRequest = Google::Protobuf::DescriptorPool.generated_pool.lookup("pb.DeleteRequest").msgclass
   DeleteResponse = Google::Protobuf::DescriptorPool.generated_pool.lookup("pb.DeleteResponse").msgclass
+  DeleteAllRequest = Google::Protobuf::DescriptorPool.generated_pool.lookup("pb.DeleteAllRequest").msgclass
+  DeleteAllResponse = Google::Protobuf::DescriptorPool.generated_pool.lookup("pb.DeleteAllResponse").msgclass
 end

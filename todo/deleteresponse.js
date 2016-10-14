@@ -8,6 +8,7 @@
 goog.provide('proto.pb.DeleteResponse');
 
 goog.require('jspb.Message');
+goog.require('proto.pb.TodoResponse');
 
 
 /**
@@ -55,7 +56,8 @@ proto.pb.DeleteResponse.prototype.toObject = function(opt_includeInstance) {
  */
 proto.pb.DeleteResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    error: msg.getError()
+    error: msg.getError(),
+    todo: (f = msg.getTodo()) && proto.pb.TodoResponse.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -87,6 +89,27 @@ proto.pb.DeleteResponse.prototype.getError = function() {
 /** @param {string} value  */
 proto.pb.DeleteResponse.prototype.setError = function(value) {
   jspb.Message.setField(this, 1, value);
+};
+
+
+/**
+ * optional TodoResponse todo = 2;
+ * @return {proto.pb.TodoResponse}
+ */
+proto.pb.DeleteResponse.prototype.getTodo = function() {
+  return /** @type{proto.pb.TodoResponse} */ (
+    jspb.Message.getWrapperField(this, proto.pb.TodoResponse, 2));
+};
+
+
+/** @param {proto.pb.TodoResponse|undefined} value  */
+proto.pb.DeleteResponse.prototype.setTodo = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.pb.DeleteResponse.prototype.clearTodo = function() {
+  this.setTodo(undefined);
 };
 
 

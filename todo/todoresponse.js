@@ -57,10 +57,7 @@ proto.pb.TodoResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     id: msg.getId(),
     title: msg.getTitle(),
-    url: msg.getUrl(),
-    completed: msg.getCompleted(),
-    order: msg.getOrder(),
-    text: msg.getText()
+    completed: msg.getCompleted()
   };
 
   if (includeInstance) {
@@ -111,64 +108,19 @@ proto.pb.TodoResponse.prototype.setTitle = function(value) {
 
 
 /**
- * optional string url = 3;
- * @return {string}
- */
-proto.pb.TodoResponse.prototype.getUrl = function() {
-  return /** @type {string} */ (jspb.Message.getFieldProto3(this, 3, ""));
-};
-
-
-/** @param {string} value  */
-proto.pb.TodoResponse.prototype.setUrl = function(value) {
-  jspb.Message.setField(this, 3, value);
-};
-
-
-/**
- * optional bool completed = 4;
+ * optional bool completed = 3;
  * Note that Boolean fields may be set to 0/1 when serialized from a Java server.
  * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
 proto.pb.TodoResponse.prototype.getCompleted = function() {
-  return /** @type {boolean} */ (jspb.Message.getFieldProto3(this, 4, false));
+  return /** @type {boolean} */ (jspb.Message.getFieldProto3(this, 3, false));
 };
 
 
 /** @param {boolean} value  */
 proto.pb.TodoResponse.prototype.setCompleted = function(value) {
-  jspb.Message.setField(this, 4, value);
-};
-
-
-/**
- * optional int64 order = 5;
- * @return {number}
- */
-proto.pb.TodoResponse.prototype.getOrder = function() {
-  return /** @type {number} */ (jspb.Message.getFieldProto3(this, 5, 0));
-};
-
-
-/** @param {number} value  */
-proto.pb.TodoResponse.prototype.setOrder = function(value) {
-  jspb.Message.setField(this, 5, value);
-};
-
-
-/**
- * optional string text = 6;
- * @return {string}
- */
-proto.pb.TodoResponse.prototype.getText = function() {
-  return /** @type {string} */ (jspb.Message.getFieldProto3(this, 6, ""));
-};
-
-
-/** @param {string} value  */
-proto.pb.TodoResponse.prototype.setText = function(value) {
-  jspb.Message.setField(this, 6, value);
+  jspb.Message.setField(this, 3, value);
 };
 
 

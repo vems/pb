@@ -3,7 +3,7 @@ syntax = "proto3";
 package pb;
 
 service Todo {
-  rpc All (AllRequest) returns (TodosReply) {}
+  rpc All (AllRequest) returns (TodosResponse) {}
   rpc Create (CreateRequest) returns (TodoResponse) {}
   rpc Find (FindRequest) returns (TodoResponse) {}
   rpc Update (UpdateRequest) returns (TodoResponse) {}
@@ -14,20 +14,15 @@ service Todo {
 message TodoRequest {
   string title = 1;
   bool completed = 2;
-  int64 order = 3;
-  string text = 4;
 }
 
 message TodoResponse {
   int64 id = 1;
   string title = 2;
-  string url = 3;
-  bool completed = 4;
-  int64 order = 5;
-  string text = 6;
+  bool completed = 3;
 }
 
-message TodosReply {
+message TodosResponse {
   repeated TodoResponse todos = 1;
 }
 
@@ -46,14 +41,15 @@ message UpdateRequest {
   TodoRequest todo = 2;
 }
 
-message DeleteAllRequest {}
-
-message DeleteAllResponse {}
-
 message DeleteRequest {
   int64 id = 1;
 }
 
 message DeleteResponse {
   string error = 1;
+  TodoResponse todo = 2;
 }
+
+message DeleteAllRequest {}
+
+message DeleteAllResponse {}

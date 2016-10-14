@@ -56,9 +56,7 @@ proto.pb.TodoRequest.prototype.toObject = function(opt_includeInstance) {
 proto.pb.TodoRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     title: msg.getTitle(),
-    completed: msg.getCompleted(),
-    order: msg.getOrder(),
-    text: msg.getText()
+    completed: msg.getCompleted()
   };
 
   if (includeInstance) {
@@ -107,36 +105,6 @@ proto.pb.TodoRequest.prototype.getCompleted = function() {
 /** @param {boolean} value  */
 proto.pb.TodoRequest.prototype.setCompleted = function(value) {
   jspb.Message.setField(this, 2, value);
-};
-
-
-/**
- * optional int64 order = 3;
- * @return {number}
- */
-proto.pb.TodoRequest.prototype.getOrder = function() {
-  return /** @type {number} */ (jspb.Message.getFieldProto3(this, 3, 0));
-};
-
-
-/** @param {number} value  */
-proto.pb.TodoRequest.prototype.setOrder = function(value) {
-  jspb.Message.setField(this, 3, value);
-};
-
-
-/**
- * optional string text = 4;
- * @return {string}
- */
-proto.pb.TodoRequest.prototype.getText = function() {
-  return /** @type {string} */ (jspb.Message.getFieldProto3(this, 4, ""));
-};
-
-
-/** @param {string} value  */
-proto.pb.TodoRequest.prototype.setText = function(value) {
-  jspb.Message.setField(this, 4, value);
 };
 
 
